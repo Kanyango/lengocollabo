@@ -35,7 +35,7 @@ import { CampaignComponent } from './modules/marketing/campaigns/campaigns';
 import { NewCampsComponent } from './modules/marketing/campaigns/newcamps';
 
 const routes: Routes = [
-
+               {path: '', redirectTo: 'dash', pathMatch: 'full'}, 
                { path: 'dash', component: DashComponent },
                { path: 'leadgens', component: LeadGensComponent },
                { path: 'newleadscampaign', component: NewLeadComponent },
