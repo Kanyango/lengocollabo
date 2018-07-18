@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class RecruitingComponent implements OnInit
 {
     
-    txts = [];
+    recruits = [];
     private allRecruitUrl = 'http://localhost:8800/hr/recruit/';
     
     constructor(private http: HttpClient,  private route: ActivatedRoute)
@@ -23,7 +23,7 @@ export class RecruitingComponent implements OnInit
         this.http.get<any>(this.allRecruitUrl)
             .subscribe(data => 
             {
-                this.txts = data;
+                this.recruits = data;
                 console.log(data);
             });
     }
