@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    New Recruitment Text
+                </div>
+            </div>
+            <div class="content">
+                <form class="ui form" [formGroup]="recruitForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Text
+                              </div>
+                            <textarea type="text"  formControlName="text"></textarea>
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Send to
+                              </div>
+                              <input type="text" placeholder="" formControlName="send_to">
+                            </div>
+                    </div>
+                    
+                    
+                   
+                    <button class="ui green right floated button" [disabled]="!recruitForm.valid" type="submit">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

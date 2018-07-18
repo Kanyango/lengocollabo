@@ -1,0 +1,87 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    New Staff Shifts
+                </div>
+            </div>
+            <div class="content">
+                <form class="ui form" [formGroup]="shiftsForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Shift Job
+                              </div>
+                              <input type="text" placeholder="campaign" formControlName="shift_job">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Shift Duration
+                              </div>
+                              <input type="text" placeholder="" formControlName="shift_duration">
+                            </div>
+                    </div>
+                    <div class="two even fields">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                               Start Date
+                              </div>
+                              <input suiDatepicker
+                               formControlName="start_date"
+                               [pickerMode]="mode"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Start time
+                              </div>
+                              <input suiDatepicker
+                               formControlName="start_time"
+                               [pickerMode]="mode2"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Description
+                              </div>
+                            <textarea type="text" formControlName="description"></textarea>
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Send to
+                              </div>
+                              <input type="text" placeholder="" formControlName="send_to">
+                            </div>
+                    </div>
+                   <!-- <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Shifts Shortcode
+                              </div>
+                              <input type="text" placeholder="" formControlName="shortcode">
+                            </div>
+                    </div> -->
+                    <button class="ui green right floated button" [disabled]="!shiftsForm.valid" type="submit">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

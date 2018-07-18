@@ -1,0 +1,58 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="five wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <newtask-component></newtask-component>
+                <div class="header">
+                    To do
+                </div>
+            </div>
+            <div class="content" >
+                <div  style="min-height: 200px;" dnd-droppable (onDropSuccess)="addTodo($event)">
+                    
+                    <div class="ui segment" *ngFor="let nds of todo" dnd-draggable [dragEnabled]="true" [dragData]="nds">
+                        <div class="ui header">
+                            {{ nds.name }}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="five wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                
+                <div class="header">
+                    Doing
+                </div>
+            </div>
+            <div class="content">
+                <div class="" style="min-height: 200px;" dnd-droppable (onDropSuccess)="addDoing($event)">
+                    <div class="ui segment" *ngFor="let one of doing"  dnd-draggable [dragEnabled]="true" [dragData]="one">
+                        <div class="ui header">
+                            {{ one.name }}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="five wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                
+                <div class="header">
+                    Done
+                </div>
+            </div>
+            <div class="content" style="min-height: 200px;"></div>
+        </div>
+    </div>
+</div>

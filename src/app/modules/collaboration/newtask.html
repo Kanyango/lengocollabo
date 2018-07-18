@@ -1,0 +1,77 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">New Task Card</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="ui form" [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task title
+                              </div>
+                              <input type="text" placeholder="campaign" formControlName="task_title">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task Captain
+                              </div>
+                              <input type="text" placeholder="" formControlName="task_captain">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task Start time
+                              </div>
+                              <input suiDatepicker
+                               formControlName="start_date"
+                               [pickerMode]="mode"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task End time
+                              </div>
+                              <input suiDatepicker
+                               formControlName="end_date"
+                               [pickerMode]="mode"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task captain
+                              </div>
+                              <input type="text" placeholder="" formControlName="task_captain">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Task team
+                              </div>
+                            <textarea type="text" formControlName="task_team"></textarea>
+                            </div>
+                    </div>
+                    
+                    <button class="ui green right floated button" [disabled]="!newTaskForm.valid" type="submit">save</button>
+                </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+                <button class="ui circular right floated plus icon blue button" (click)="open(content)">
+                    <i class="plus icon"></i>
+                </button>

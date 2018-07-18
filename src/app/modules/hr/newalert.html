@@ -1,0 +1,54 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    New Staff Alert
+                </div>
+            </div>
+            <div class="content">
+                <form class="ui form" [formGroup]="staffAlertForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Alert Name
+                              </div>
+                              <input type="text" placeholder="campaign" formControlName="alert_name">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Alert owner
+                              </div>
+                              <input type="text" placeholder="" formControlName="alert_owner">
+                            </div>
+                    </div>
+                    
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Alert text
+                              </div>
+                            <textarea type="text" placeholder="" formControlName="alert_text"></textarea>
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Send to
+                              </div>
+                              <input type="text" placeholder="" formControlName="send_to">
+                            </div>
+                    </div>
+                    <button class="ui green right floated button" [disabled]="!staffAlertForm.valid" type="submit">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    New Lead Capture Campaign
+                </div>
+            </div>
+            <div class="content">
+                <form class="ui form" [formGroup]="campaignsForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign Name
+                              </div>
+                              <input type="text" placeholder="campaign" formControlName="campaign_name">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign owner
+                              </div>
+                              <input type="text" placeholder="" formControlName="campaign_owner">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign Start Date
+                              </div>
+                              <input suiDatepicker
+                               formControlName="start_date"
+                               [pickerMode]="mode"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign End Date
+                              </div>
+                              <input suiDatepicker
+                               formControlName="end_date"
+                               [pickerMode]="mode"
+                               [pickerFirstDayOfWeek]="firstDayOfWeek"
+                               [pickerUseNativeOnMobile]="false" >
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign Region
+                              </div>
+                              <input type="text" placeholder="" formControlName="campaign_region">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign keyword
+                              </div>
+                              <input type="text" placeholder="" formControlName="campaign_keyword">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                Campaign Shortcode
+                              </div>
+                              <input type="text" placeholder="" formControlName="campaign_shortcode">
+                            </div>
+                    </div>
+                    <button class="ui green right floated button" [disabled]="!campaignsForm.valid" type="submit">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

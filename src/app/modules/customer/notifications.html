@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <a class="ui right floated green button" routerLink="/new/customer/notifications" >create notification</a>
+                <div class="header">
+                       Customer Notifications
+                </div>
+            </div>
+            <div class="content">
+                <div class="ui middle aligned selection list">
+                  <div class="item" *ngFor="let one of notifications">
+                    <div class="content">
+                      <div class="header">{{ one.shift_job }}</div>
+                        <strong>Start Date :</strong> {{ one.start_date | date }}
+                        <br>
+                        <strong>Start time :</strong> {{ one.start_time | date: 'shortTime' }}
+                        <br>
+                        <strong>Sent to    :</strong> {{ one.send_to}}
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

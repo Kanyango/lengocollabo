@@ -1,0 +1,29 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <a class="ui right floated green button" routerLink="customer/new/announcement" >create subs list</a>
+                <div class="header">
+                       Subscribers Lists
+                </div>
+            </div>
+            <div class="content">
+                <div class="ui selection list">
+                    <div class="item" *ngFor="let one of subs">
+                         <div class="content">
+                            <a class="ui circular right floated chevron right icon orange button " routerLink="/contacts/{{one._id}}">
+                                <i class="chevron right icon"></i>
+                             </a>
+                          <div class="header">{{ one.subs_name }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

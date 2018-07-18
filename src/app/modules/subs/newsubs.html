@@ -1,0 +1,29 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    New Subscribers List
+                </div>
+            </div>
+            <div class="content">
+                <form class="ui form" [formGroup]="newSubsForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <div class="ui labeled input">
+                              <div class="ui label">
+                                List Name
+                              </div>
+                              <input type="text" placeholder="campaign" formControlName="subs_name">
+                            </div>
+                    </div>
+                    <button class="ui green right floated button" [disabled]="!newSubsForm.valid" type="submit">save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

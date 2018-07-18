@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+
+<div class="ui grid container">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+        <div class="ui fluid card">
+            <div class="content">
+                <a class="ui right floated green button" routerLink="/staff/new/alerts">create alerts</a>
+                <div class="header">
+                      Staff Alerts
+                </div>
+            </div>
+            <div class="content">
+                <div class="ui middle aligned selection list">
+                  <div class="item" *ngFor="let one of alerts">
+                    <div class="content">
+                      <div class="header">{{ one.alert_name }}</div>
+                        <strong>Sent to    :</strong> {{ one.send_to}}
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
